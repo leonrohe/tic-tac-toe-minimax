@@ -85,7 +85,7 @@ def minimax(board, maximizing):
 def getInput():
     global b
     print("")
-    pInput = input("Wo soll das X platziert werden? (1-9)" + "\n")
+    pInput = input("Where to place the X? (1-9)" + "\n")
     pInput = int(pInput)-1
     b.position[pInput] = -1
 
@@ -116,9 +116,9 @@ def finishGame():
     print("")
     for c in win_conditions:
         val = b.position[c[0]] + b.position[c[1]] + b.position[c[2]]
-        if(val == 3): print("Computer gewinnt!"); return 
-        elif(val == -3): print("Spieler gewinnt!"); return
-    print("Spiel endet mit einem Unentschieden")
+        if(val == 3): print("Computer wins!"); return 
+        elif(val == -3): print("Player wins!"); return
+    print("Game ends in a draw!")
 
 start_position= [0, 0, 0,   # 0, 1, 2 
                 0, 0, 0,    # 3, 4, 5
